@@ -1,0 +1,40 @@
+site_name: Mk Docs - test
+
+theme:
+  name: "material"
+
+plugins:
+  - search
+  - gen-files:
+      scripts:
+        - scripts/gen_ref_pages.py
+  - literate-nav:
+      nav_file: SUMMARY.md
+      
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            show_submoduls: true
+          rendering:
+            show_root_toc_entry: true
+            show_signature_annotation: true
+          paths: 
+            - ../src/
+
+watch:
+  - ../src/
+
+nav:
+  - Mk Docs - test: index.md
+  - tutorials.md
+  - How-To Guildes: how-to-guides.md
+  - Code Rererence: reference/
+  - explanation.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  # - toc:
+  #     premalink: true

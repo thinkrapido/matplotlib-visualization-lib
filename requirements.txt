@@ -1,0 +1,11 @@
+mkdocs
+mkdocstrings[python]
+mkdocs-material
+mkdocs-gen-files
+mkdocs-literate-nav
+
+pytest
+pytest-watcher
+
+
+mypy
