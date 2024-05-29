@@ -1,3 +1,5 @@
+reloadium
+
 mkdocs
 mkdocstrings[python]
 mkdocs-material
@@ -7,5 +9,22 @@ mkdocs-literate-nav
 pytest
 pytest-watcher
 
-
 mypy
+
+
+click
+rich
+
+
+
+numpy
+pandas
+pandas-stubs
+matplotlib
+matplotlib-stubs
+seaborn
+
+scikit-learn
+sympy
+scipy
+pyMC3
