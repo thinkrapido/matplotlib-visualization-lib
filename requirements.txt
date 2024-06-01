@@ -28,3 +28,6 @@ scikit-learn
 sympy
 scipy
 pyMC3
+mplfinance
+jupyterlab
+plotly
