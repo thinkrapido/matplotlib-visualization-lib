@@ -10,9 +10,8 @@ from pathlib import Path
 def load_symbols(symbol: list[str], dir: Path = Path().resolve()) -> pd.DataFrame:
     pass
 
-def load_symbol(symbol: str, dir: Path = Path().resolve()) -> pd.DataFrame:
-    print(str(dir))
-    df = pd.read_csv(f'{str(dir)}/data/1m/datapoints-{symbol}.csv', header=None)
+def load_symbol(symbol: str, dir: Path = Path().resolve(), interval='1m') -> pd.DataFrame:
+    df = pd.read_csv(f'{str(dir)}/data/{interval}/datapoints-{symbol}.csv', header=None)
     df.columns = ['timestamp_nanos', 'end_timestamp_nanos', 'open', 'high', 'low', 'close', 'volume', 'data_points']
     for col in ['timestamp_nanos', 'end_timestamp_nanos']:
         df[col] = pd.to_datetime(df[col], unit='ns')

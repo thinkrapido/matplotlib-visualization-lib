@@ -1,9 +1,9 @@
 
 def setup():
     import sys
-    project_root = project_root()
+    pr = project_root()
     for folder in [ 'src' ]:
-        lib_folder = project_root / folder
+        lib_folder = pr / folder
         sys.path.append(str(lib_folder))
 
 def project_root():
