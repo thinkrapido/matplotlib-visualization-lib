@@ -7,6 +7,13 @@ import pandas as pd
 
 from pathlib import Path
 
+intervals = {
+    '15m': '15min',
+    '4h':  '4h',
+    '1h':  'h',
+    '1d':  'd',
+}
+
 def load_symbols(symbol: list[str], dir: Path = Path().resolve()) -> pd.DataFrame:
     pass
 
